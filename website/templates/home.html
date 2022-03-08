@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
 
 
-<p>In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful? Worry no more! First Impression Pitches got you covered. Welcome.
+<p class="first">In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful? Worry no more! First Impression Pitches got you covered. Welcome.
 
   You can as well share with us what you got. Feel free inspire someone out there.</p>
 
@@ -31,7 +31,7 @@
             </div>
           </form> <br>
 
-          <ul style="background-color: hwb(0 96% 4%);" class="list-group list-group-flush " id="notes">
+          <ul style="background-color: hwb(0 98% 2%);" class="list-group list-group-flush " id="notes">
             {% for note in user.notes %}
             {{ note.data }}
             <li class="list-group-item text-dark">
