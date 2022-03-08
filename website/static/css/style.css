@@ -4,4 +4,6 @@ body {
 }
 .first{
     font-style: italic;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
 }
