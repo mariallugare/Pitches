@@ -1,7 +1,9 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
 
 
+<p>In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful? Worry no more! First Impression Pitches got you covered. Welcome.
 
+  You can as well share with us what you got. Feel free inspire someone out there.</p>
 
 <div class="container-fluid">
   <div class="row">
@@ -10,7 +12,7 @@
         <div class="card-header text-center">All pitches</div>
         <div class="card-body">
           <h5 class="card-title text-center">Interview pitch</h5>
-          <p class="card-text">“Hi, my name is Marial. After graduating with my Bachelor’s degree in Business Administration, I’ve spent the last three years building professional experience as an Executive Assistant. I’ve successfully managed end-to-end event coordination and have generated a strong professional network for my colleagues. I was excited to learn about this opportunity in the sports management space — I’ve always been passionate about the way sports brings cultures together and would love the opportunity to bring my project management and leadership abilities to this position.</p>
+          <p class="card-text">“Hi, my name is Marial. After graduating with my Bachelor’s degree in Business Administration, I’ve spent the last three years building professional experience as an Executive Assistant. I’ve successfully managed end-to-end event coordination and have generated a strong professional network for my colleagues. I was excited to learn about this opportunity in the software management space — I’ve always been passionate about the way sports brings cultures together and would love the opportunity to bring my project management and leadership abilities to this position.</p>
           <button type="button" id="btn_like" class="btn btn-primary btn-danger btn-sm btn">Like <span><i
                 class="glyphicon glyphicon-thumbs-up"></i></span></button>
           <button type="button" id="btn_dislike" class="btn btn-primary btn-danger btn-sm">Dislike <span><i
@@ -29,7 +31,7 @@
             </div>
           </form> <br>
 
-          <ul style="background-color: rgb(99, 92, 92);" class="list-group list-group-flush " id="notes">
+          <ul style="background-color: hwb(0 96% 4%);" class="list-group list-group-flush " id="notes">
             {% for note in user.notes %}
             {{ note.data }}
             <li class="list-group-item text-dark">
@@ -51,7 +53,7 @@
     </div>
 
     <div class="col-md-5">
-      <h4 align="center">Status quo | Pick up lines | Status quo | Interview | Promotion | <hr>
+      <h4 align="center">Discussion pitches| Friendship pitches | | Interview pitches | Promotion pitches| <hr>
     </div>
 
     
