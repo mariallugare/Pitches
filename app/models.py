@@ -6,14 +6,14 @@ class Pitch(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data = db.Column(db.String(10000))
     category = db.Column(db.String(300))
-    comments = db.relationship('Comment', backref='pitch', lazy='dynamic')
+    comments = db.relationship('Comment', backref='pitch_id', lazy='dynamic')
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(150), unique=True)
-    comments = db.relationship('Comment', backref='pitch', lazy='dynamic')
+    comments = db.relationship('Comment', backref='user_id', lazy='dynamic')
     username = db.Column(db.String(150))
 
     def __repr__(self):
