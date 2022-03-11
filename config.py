@@ -2,9 +2,9 @@ import os
 
 class Config:
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://marial:Doralove91!@localhost/pitch_hub'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://marial:Doralove91!@localhost/pitch_hub2'
     SECRET_KEY = 'marial'
-
+    # SQLALCHEMY_DATABASE_URI ='sqlite:////tmp/test.db'
 
 class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL','')

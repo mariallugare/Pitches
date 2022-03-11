@@ -3,19 +3,21 @@ from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
 from config import config_options
+from flask_bootstrap import Bootstrap
 # from . import db
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
 
 
-
+# Initializing Flask Extensions
+bootstrap = Bootstrap()
 
 
 def create_app():
     app = Flask(__name__)
      # Creating the app configurations
-    app.config.from_object(config_options['production'])
+    app.config.from_object(config_options['development'])
     db.init_app(app)
 
     from .main.views import views
@@ -25,7 +27,7 @@ def create_app():
     app.register_blueprint(auth, url_prefix='/auth/')
 
     from .models import User, Pitch
-
+    bootstrap.init_app(app)
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'

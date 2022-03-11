@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% import "bootstrap/wtf.html" as wtf %}{% block content%}
+
+        {% if friendships %}
+        <p> No friendships Pitches </p>
+    {% else  %}
+    {% for pitch in friendships %}
+    <title> {{ pitch.data }}</title>
+    {% endfor %}
+    
+    {% endif %}
+
+<footer class="page-footer font-small blue bg-dark">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-white">&copy; 2022 Copyright:
+  
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  {% endblock %}
+   
