@@ -1,13 +1,15 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% import "bootstrap/wtf.html" as wtf %}{% block content%}
 
-        {% if friendships %}
-        <p> No friendships Pitches </p>
-    {% else  %}
-    {% for pitch in friendships %}
-    <title> {{ pitch.data }}</title>
-    {% endfor %}
-    
-    {% endif %}
+{% if friendship %}
+{% for pitch in friendship %}
+<p> {{ pitch.data }}</p>
+{% endfor %}
+
+{% else  %}
+
+<p> No friendship Pitches </p>
+
+{% endif %}
 
 <footer class="page-footer font-small blue bg-dark">
 

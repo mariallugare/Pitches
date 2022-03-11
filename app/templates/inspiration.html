@@ -3,11 +3,13 @@
     </head>
     <body>
         {% if inspirational %}
-        <p> No inspirational Pitches </p>
+        {% for pitch in inspirational %}
+        <p> {{ pitch.data }}</p>
+        {% endfor %}
+
     {% else  %}
-    {% for pitch in inspirational %}
-    <title> {{ pitch.data }}</title>
-    {% endfor %}
+   
+    <p> No inspirational Pitches </p>
     
     {% endif %}
    

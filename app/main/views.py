@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, jsonify
+from flask import Blueprint, render_template, request, flash, jsonify,redirect,url_for
 from flask_login import login_required, current_user
 from ..models import Pitch
 from .. import db
@@ -21,7 +21,12 @@ def home():
             db.session.add(new_pitch)
             db.session.commit()
             flash('Comment added!', category='success')
-            
+            if category =='friendship':
+                return redirect(url_for('views.friendship'))
+            elif category=='Inspirational':
+                return redirect(url_for('views.inspiration'))
+            else:
+                return redirect(url_for('views.discussion'))
   
     print(Pitch.query.all())
     return render_template("home.html", user=current_user,pitchform=pitchform)
@@ -42,12 +47,15 @@ def delete_note():
 @views.route('/inspiration')
 def inspiration():
     inspirational =Pitch.query.filter_by(category= 'Inspirational').all()
+    print(inspirational)
     return render_template('inspiration.html', user=current_user,inspirational = inspirational)
     
 @views.route('/friendship')
 def friendship():
     friendships = Pitch.query.filter_by(category ='friendship').all()
-    return render_template('friendship.html', user=current_user,friendships=friendships)
+    print(friendship)
+    return render_template('friendship.html', user=current_user,friendship=friendships)
+
 
 @views.route('/discussion')
 def discussion():
