@@ -9,10 +9,15 @@ User stories
 The user is able to;
 
 see the pitches other people have posted.
+
 view the pitches created in profile page
+
 submit a pitch in any category.
+
 view pitches from different categories.
+
 Leave a comment on a specific pitch.
+
 # Requirements
 This program requires python3.+ installed, a guide on how to install python on various platforms can be found here
 # Setup/Installation
