@@ -36,5 +36,7 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://marial:Doralove91!@localhost/pitch_hub2'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
     return app

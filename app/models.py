@@ -20,7 +20,8 @@ class User(db.Model, UserMixin):
 
     @property
     def password(self):
-        raise AttributeError('You cannot read the password attribute')
+      raise AttributeError('You cannot read the password attribute')
+
 
     @password.setter
     def password(self, password):
